@@ -15,19 +15,19 @@ else
 <br>
 <div id="myDiv01">...</div>
 <br>
-<i> Win = Win Mans, Else = ? </i><br>
-<input type= text id="myText02" value="Thassa win win my mans"><br>
+<i> Yes = Yes, Else = No </i><br>
+<input type= text id="myText02" value="Yes"><br>
 
 <input type=button value=Run onClick="{
 let myTemp = document.getElementById('myText02').value
 
-if (myTemp == Thassa win win mans)
+if (myTemp == Yes)
 {
-   document.getElementById(myDiv02).innerHTML = ('Thassa win win mans')
+   document.getElementById(myDiv02).innerHTML = ('Yes')
 }
 else 
 {
-   document.getElementById(myDiv02).innerHTML = ('Is it though?')
+   document.getElementById(myDiv02).innerHTML = ('No')
 }
 document.getElementById('myDiv02').innerHTML = myTemp
 }">
