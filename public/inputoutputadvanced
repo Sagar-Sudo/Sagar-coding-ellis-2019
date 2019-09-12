@@ -1,1 +1,22 @@
+<input type= text id="myText01" value="3"><br>
+<i>
+<input type=button value=run onClick="{
+let myTemp = document.getElementById('myText01').value
+if (myTemp == 3)
+{
+    document.getElementById('myDiv01').innerHTML = ('a')
+}
+else
+{
+    document.getElementById('myDiv01').innerHTML = ('b')}
+}"
+<br>
+<div id="myDiv01">...</div>
+<input type= text id="myText02" value="Thassa win win my mans"><br>
 
+<input type=button value=Run onClick="{
+let myTemp = document.getElementById('myText02').value
+document.getElementById('myDiv02').innerHTML = myTemp
+}">
+
+<div id="myDiv02">...</div>
