@@ -30,3 +30,20 @@ else
 }"
 <br>
 <div id="myDiv02">...</div>
+
+<input type=text id="myName01" value="Name"><br>
+<input type=text id="myAge01" value="16"><br>
+
+<input type=button value=run onclick="{
+   let myAge = Math.abs(document.getElementById('myAge01').value)
+   let myTemp = 'You are a Teen'
+   if (myAge <= 12){ myTemp = 'You are a Child'}
+   if (myAge >=20 && myAge < 65 ){ myTemp = 'You are an Adult'}
+   if (myAge >=65 && myAge < 80 ){ myTemp = 'You must Retire'}
+   if (myAge >= 80){ myTemp = 'You are going to die soon'}
+                                      
+                                      
+                                      
+   document.getElementById('myDiv03').innerHTML = myTemp
+}">
+<div id="myDiv03">...</div>
