@@ -31,19 +31,54 @@ else
 <br>
 <div id="myDiv02">...</div>
 
-<input type=text id="myName01" value="Name"><br>
+<h1><strong> Input Output </strong></h1>
+<i> 3 is doubled, Else is ;) </i><br>
+<input type= text id="myText01" value="3"><br>
+
+<input type=button value=run onClick="{
+let myTemp = document.getElementById('myText01').value
+if (myTemp == 3)
+{
+    document.getElementById('myDiv01').innerHTML = ('6')
+}
+else
+{
+    document.getElementById('myDiv01').innerHTML = (';)')}
+}"
+<br>
+<div id="myDiv01">...</div>
+<br>
+<!--2nd input-->
+<i> Yes = Yes, Else = No </i><br>
+<input type= text id="myText02" value="Yes"><br>
+
+<input type=button value=run onClick="{
+let myTemp = document.getElementById('myText02').value
+if (myTemp == 'Yes')
+{
+    document.getElementById('myDiv02').innerHTML = ('Yes')
+}
+else
+{
+    document.getElementById('myDiv02').innerHTML = ('No')}
+}"
+<br>
+<div id="myDiv02">...</div>
+<!--Age thing-->
+<input type=text id="myName01" value="Harry"><br>
 <input type=text id="myAge01" value="16"><br>
 
 <input type=button value=run onclick="{
    let myAge = Math.abs(document.getElementById('myAge01').value)
-   let myTemp = 'You are a Teen'
-   if (myAge <= 12){ myTemp = 'You are a Child'}
-   if (myAge >=20 && myAge < 65 ){ myTemp = 'You are an Adult'}
-   if (myAge >=65 && myAge < 80 ){ myTemp = 'You must Retire'}
-   if (myAge >= 80){ myTemp = 'You are going to die soon'}
-   if (myAge > 99){ myTemp = 'You are hundies dead'}                                    
-                                      
-                                      
+   let myName01 = document.getElementById('myName01').value
+   let myTemp = myName01 + ' is a teen'
+   if (myAge <= 12){ myTemp = myName01 + ' is a child'}
+   if (myAge >=20 && myAge < 65 ){ myTemp = myName01 + ' is an adult'}
+   if (myAge >=65 && myAge < 80 ){ myTemp = myName01 + ' must retire'}
+   if (myAge >= 80){ myTemp = myName01 + ' is going to die soon'}
+   if (myAge > 99){ myTemp = myName01 + ' is hundies dead'}
+
+
    document.getElementById('myDiv03').innerHTML = myTemp
 }">
 <div id="myDiv03">...</div>
