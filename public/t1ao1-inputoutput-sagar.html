@@ -17,23 +17,3 @@ else
 <br>
 <div id="myDiv01">...</div>
 <br>
-
-<!--Age thing-->
-<h1> Age Thingy </h1>
-<input type=text id="myName01" value="Harry"><br>
-<input type=text id="myAge01" value="16"><br>
-
-<input type=button value=run onclick="{
-   let myAge = Math.abs(document.getElementById('myAge01').value)
-   let myName01 = document.getElementById('myName01').value
-   let myTemp = myName01 + ' is a teen.'
-   if (myAge <= 12){ myTemp = myName01 + ' is a child.'}
-   if (myAge >=20 && myAge < 65 ){ myTemp = myName01 + ' is an adult.'}
-   if (myAge >=65 && myAge < 80 ){ myTemp = myName01 + ' must retire.'}
-   if (myAge >= 80){ myTemp = myName01 + ' is going to die soon.'}
-   if (myAge > 99){ myTemp = myName01 + ' is hundies dead.'}
-
-
-   document.getElementById('myDiv03').innerHTML = myTemp
-}">
-<div id="myDiv03">...</div>
