@@ -1,1 +1,42 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<h1 align=center> t1a09-objects-Sagar.html<br>
 
+Objects, decisions, decimals by Sagar</h1>
+Body Temp: <input type=text id="myText01" value="36.1">
+°C<br>
+<input type=button value="input/Output" onclick="{
+    let myPerson = {'age':'22', 'name':'Sagar'};
+
+    let myTemp = document.getElementById('myText01').value
+    let myPrintout = 'myPerson object :  ' +
+JSON.stringify(myPerson, null, 3) + ' myPerson.age :  ' +
+myPerson.age
+    let myIf = 'cool'
+    if ( parseInt(myPerson.age) >= 20) {myIf = 'You are an Adult.'}
+
+    document.getElementById('myDiv01').innerHTML = myIf
+    document.getElementById('myTextArea').value  myPrintout
+}">
