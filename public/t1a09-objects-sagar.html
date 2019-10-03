@@ -25,25 +25,26 @@
 <h1 align=center> t1a09-objects-Sagar.html<br>
 
 Objects, decisions, decimals by Sagar</h1>
+You add Body Temp and determine if the user has a fever,<br>
+advanced: input the body Temp into the objects.<br>
+
 Body Temp: <input type=text id="myText01" value="36.1">
 °C<br>
-
-
 <br>
 
-<input type=button value="Input/Output" onclick="{   
-  let myPerson = {'age':'22', 'name':'johnathan'};
+<input type=button value="Input/Output" onclick="{
+  let myPerson = {'age':'17', 'name':'Ajay'};
       let myTemp = document.getElementById('myText01').value
-                                      
+
      let myPrintout =  'myPerson object :' +
-       JSON.stringify(myPerson, null, 3) + ' myPerson.age : ' + myPerson.age  
-                                      
-       let myIf = 'cool'                               
+       JSON.stringify(myPerson, null, 3) + ' myPerson.age : ' + myPerson.age
+
+       let myIf = 'cool'
         if ( parseInt(myPerson.age) >= 20)
-{myIf = 'You are a adult'}                              
-                                      
-        document.getElementById('myDiv01').innerHTML = myIf                              
-        document.getElementById('myTextArea01').value = myPrintout                               
+{myIf = 'You are a teen'}
+
+        document.getElementById('myDiv01').innerHTML = myIf
+        document.getElementById('myTextArea01').value = myPrintout
 }">
 <div id="myDiv01">...</div><br>
 <textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
