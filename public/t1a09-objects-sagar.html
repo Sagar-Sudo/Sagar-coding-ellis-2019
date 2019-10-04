@@ -28,23 +28,45 @@ Objects, decisions, decimals by Sagar</h1>
 You add Body Temp and determine if the user has a fever,<br>
 advanced: input the body Temp into the objects.<br>
 
-Body Temp: <input type=text id="myText01" value="36.1">
-°C<br>
+<br>
 <br>
 
-<input type=button value="Input/Output" onclick="{
-  let myPerson = {'age':'17', 'name':'Ajay'};
-      let myTemp = document.getElementById('myText01').value
+<body id="myBody">
 
-     let myPrintout =  'myPerson object :' +
-       JSON.stringify(myPerson, null, 3) + ' myPerson.age : ' + myPerson.age
-
-       let myIf = 'cool'
-        if ( parseInt(myPerson.age) >= 20)
-{myIf = 'You are a teen'}
-
-        document.getElementById('myDiv01').innerHTML = myIf
-        document.getElementById('myTextArea01').value = myPrintout
+Body Temp: <input type=text id="myText01" value="36.1">°C
+<br>
+<input type=button value="First Name" id="button01"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+document.getElementById('myDiv01').innerHTML = 'Mr/Mrs '+ myObj.lastname+ '`s first name is '+myObj.firstname
+}"><input type=button value="Last Name" id="button02"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+document.getElementById('myDiv01').innerHTML = myObj.firstname +'`s last name is '+myObj.lastname
 }">
-<div id="myDiv01">...</div><br>
-<textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
+<input type=button value="Age" id="button03"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+document.getElementById('myDiv01').innerHTML = myObj.firstname+' is '+myObj.age+' years old'
+}">
+<input type=button value="Birth Date" id="button04"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born '+myObj.birthdate
+}">
+<input type=button value="hEAT" id="button04"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born '+myObj.birthdate
+}">
+<br>
+
+<textarea rows="8" cols="70" id="myTextA01" >{
+"firstname":"Ron",
+"lastname":"Johnson",
+"age":"45",
+"birthdate":"01/01/2000"
+}
+</textarea>
+
+<div id="myDiv01">...</div>
