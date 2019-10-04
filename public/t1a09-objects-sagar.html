@@ -34,11 +34,12 @@ advanced: input the body Temp into the objects.<br>
 <body id="myBody">
 
 Body Temp: <input type=text id="myText01" value="36.1">°C
+
 <br>
 <input type=button value="First Name" id="button01"onclick="{
 var myObj = {}
 myObj=JSON.parse(document.getElementById('myTextA01').value)
-document.getElementById('myDiv01').innerHTML = 'Mr/Mrs '+ myObj.lastname+ '`s first name is '+myObj.firstname
+document.getElementById('myDiv01').innerHTML = 'Objective '+ myObj.lastname+ '`s first name is '+myObj.firstname
 }"><input type=button value="Last Name" id="button02"onclick="{
 var myObj = {}
 myObj=JSON.parse(document.getElementById('myTextA01').value)
@@ -52,21 +53,51 @@ document.getElementById('myDiv01').innerHTML = myObj.firstname+' is '+myObj.age+
 <input type=button value="Birth Date" id="button04"onclick="{
 var myObj = {}
 myObj=JSON.parse(document.getElementById('myTextA01').value)
-document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born '+myObj.birthdate
+document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born on '+myObj.birthdate
 }">
-<input type=button value="hEAT" id="button04"onclick="{
+<input type=button value="Body Temp" id="button05"onclick="{
 var myObj = {}
 myObj=JSON.parse(document.getElementById('myTextA01').value)
-document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born '+myObj.birthdate
+document.getElementById('myDiv01').innerHTML = myObj.firstname+'s` body temperature is '+myObj.bodytemp +'°C'
 }">
 <br>
 
 <textarea rows="8" cols="70" id="myTextA01" >{
-"firstname":"Ron",
-"lastname":"Johnson",
-"age":"45",
-"birthdate":"01/01/2000"
+"firstname":"Sagar",
+"lastname":"Kataria",
+"age":"555",
+"birthdate":"31/12/1464",
+"bodytemp":"36.1"
 }
 </textarea>
 
 <div id="myDiv01">...</div>
+
+<!--awes.e-->
+<input type=text id="myName01" value="Harry"><i>Name</i><br>
+<input type=text id="myAge01" value="16"><i>Age</i><br>
+<input type=text id="myBodyTemp01" value="36.1"><i>Body Temp</i>°C<br>
+<input type=button value=run onclick="{
+   let myAge = Math.abs(document.getElementById('myAge01').value)
+   let myName01 = document.getElementById('myName01').value
+   let myTemp = myName01 + ' is a teen.'
+   if (myAge <= 12){ myTemp = myName01 + ' is a child.'}
+   if (myAge >=20 && myAge < 65 ){ myTemp = myName01 + ' is an adult.'}
+   if (myAge >=65 && myAge < 80 ){ myTemp = myName01 + ' must retire.'}
+   if (myAge >= 80){ myTemp = myName01 + ' is going to die soon.'}
+   if (myAge > 99){ myTemp = myName01 + ' is hundies dead.'}
+   let myBodyTemp = Math.abs(document.getElementById('myBodyTemp01').value)
+   if (myBodyTemp <= 12){ myTemp2 = myName01 + ' is cold.'}
+   if (myBodyTemp >=20 && myBodyTemp < 30 ){ myTemp2 = myName01 + ' is chilly.'}
+   if (myBodyTemp >=30 && myBodyTemp < 45 ){ myTemp2 = myName01 + ' has a normal temperature.'}
+   if (myBodyTemp >=45 && myBodyTemp < 65 ){ myTemp2 = myName01 + ' is sweltering and most likely has a fever.'}
+   if (myBodyTemp >=65 && myBodyTemp < 80 ){ myTemp2 = myName01 + ' is burning.'}
+   if (myBodyTemp >= 80){ myTemp2 = myName01 + ' has liquid fire in him and is going to die soon.'}
+   if (myBodyTemp > 99){ myTemp2 = myName01 + ' is hundies dead and burned(to the death).'}
+
+
+   document.getElementById('myDiv03').innerHTML = myTemp
+   document.getElementById('myDiv04').innerHTML = myTemp2
+}">
+<div id="myDiv03">...</div>
+<div id="myDiv04">...</div>
