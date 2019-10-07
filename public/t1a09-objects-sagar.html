@@ -87,7 +87,9 @@ document.getElementById('myDiv01').innerHTML = myObj.firstname+'s` body temperat
    if (myAge >= 80){ myTemp = myName01 + ' is going to die soon.'}
    if (myAge > 99){ myTemp = myName01 + ' is hundies dead.'}
    let myBodyTemp = Math.abs(document.getElementById('myBodyTemp01').value)
-   if (myBodyTemp <= 12){ myTemp2 = myName01 + ' is cold.'}
+
+   if (myBodyTemp <= 4){ myTemp2 = myName01 + ' is freezing.'}
+   if (myBodyTemp >= 12){ myTemp2 = myName01 + ' is cold.'}
    if (myBodyTemp >=20 && myBodyTemp < 30 ){ myTemp2 = myName01 + ' is chilly.'}
    if (myBodyTemp >=30 && myBodyTemp < 45 ){ myTemp2 = myName01 + ' has a normal temperature.'}
    if (myBodyTemp >=45 && myBodyTemp < 65 ){ myTemp2 = myName01 + ' is sweltering and most likely has a fever.'}
