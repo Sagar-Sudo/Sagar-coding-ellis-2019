@@ -25,21 +25,34 @@
  <h1> Objects/Arrays by Sagar </h1>
 
 
-<input type=button value="Show Object Array" onclick="{
-    let  myObjectArray = {'age':'22', 'name':'Sagar', 'birthdate':'03/04/1999', 'hobbies':['Reading, working out, playing video games'], 'Music Preference':['Hip-Hop, Rap'], 'myToys':['Xbox', 'Nintendo DS', 'Lego']};
+<input style="color:white; background-color: navy "type=button value="Show Object Array" onclick="{
+    let  myObjectArray = {'age':'22', 'name':'Sagar', 'birthdate':'03/04/1999', 'hobbies':['reading', 'working out', 'playing video games'], 'Music Preference':['Hip-Hop, Rap'], 'myToys':['Xbox', 'Nintendo DS', 'Lego']};
 
     let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
     document.getElementById('myTextArea02').value = myPrintout
-    document.getElementById('myDiv02').innerHTML = 'Personal Stuff'
+    document.getElementById('myDiv02').innerHTML = 'This man`s name is ' + myObjectArray.name + '.'
+    document.getElementById('myDiv03').innerHTML = 'Sagar`s age is ' + myObjectArray.age + '.'
+    document.getElementById('myDiv04').innerHTML =  myObjectArray.birthdate + ' Is Sagar`s birthdate.'
+    document.getElementById('myDiv05').innerHTML = 'Some of his hobbies are ' + myObjectArray.hobbies[0] + ' and ' + myObjectArray.hobbies[1] +'.'
+
+
+
 }">
 
-<input type=button value="Show Array Object" onclick="{
-    let myArrayObject = ['Milk', 'Chips', 'Chocolates', 'Candy', 'Chicken', 'Bars', ];
+<input style="color:orange; background-color: black " type=button value="Show Array Object" onclick="{
+    let myArrayObject = ['Milk', 'Candy', 'Chicken', 'Bars', ];
 
     let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
     document.getElementById('myTextArea02').value = myPrintout
-    document.getElementById('myDiv02').innerHTML = 'FOOD'
-}">
+    document.getElementById('myDiv02').innerHTML = 'I like to drink ' + myArrayObject[0] + '.'
+    document.getElementById('myDiv03').innerHTML =  myArrayObject[1] + ' is something I eat a lot.'
+    document.getElementById('myDiv04').innerHTML = 'FOOD'
+    document.getElementById('myDiv05').innerHTML = 'FOOD'
 
-<div id="myDiv02">...</div><br>
-<textarea id="myTextArea02" rows=10 cols=80 noWRAP>...</textarea>
+
+}">
+<textarea style="color:red; background-color:#112222 " id="myTextArea02" rows=10 cols=80 noWRAP>...</textarea>
+<div style="color:blue; " id="myDiv02">...</div>
+<div style="color:balck; " id="myDiv03">...</div>
+<div style="color:green; " id="myDiv04">...</div>
+<div style="color:brown; " id="myDiv05">...</div>
