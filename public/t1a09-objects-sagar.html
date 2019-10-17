@@ -77,25 +77,20 @@ document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born on '+m
    let myAge = Math.abs(document.getElementById('myAge01').value)
    let myName01 = document.getElementById('myName01').value
    let myTemp = myName01 + ' is a teen.'
-   if (myAge <= 12){ myTemp = myName01 + ' is a child.'}
-   if (myAge >=20 && myAge < 65 ){ myTemp = myName01 + ' is an adult.'}
-   if (myAge >=65 && myAge < 80 ){ myTemp = myName01 + ' must retire.'}
-   if (myAge >= 80){ myTemp = myName01 + ' is going to die soon.'}
-   if (myAge > 99){ myTemp = myName01 + ' is hundies dead.'}
+   if (myAge <= 12){ myTemp = myName01 + ' is a child.'}(myBodyTemp <= 4){ myTemp2 = myName01 + ' is freezing.'}
+   if (myAge >=20 && myAge < 65 ){ myTemp = myName01 + ' is an adult.'}(myBodyTemp >= 12){ myTemp2 = myName01 + ' is cold.'}
+   if (myAge >=65 && myAge < 80 ){ myTemp = myName01 + ' must retire.'}(myBodyTemp >=20 && myBodyTemp < 30 ){ myTemp2 = myName01 + ' is chilly.'}
+   if (myAge >= 80){ myTemp = myName01 + ' is going to die soon.'}(myBodyTemp >=30 && myBodyTemp < 45 ){ myTemp2 = myName01 + ' has a normal temperature.'}
+   if (myAge > 99){ myTemp = myName01 + ' is hundies dead.'}(myBodyTemp >=45 && myBodyTemp < 65 ){ myTemp2 = myName01 + ' is sweltering and most likely has a fever.'}
+   if (myAge > 99){ myTemp = myName01 + ' is hundies dead.'}(myBodyTemp >=65 && myBodyTemp < 80 ){ myTemp2 = myName01 + ' is burning. Major fever. '}
+   if (myAge > 99){ myTemp = myName01 + ' is hundies dead.'}(myBodyTemp >= 80){ myTemp2 = myName01 + 'has been internally cooked.'}
+   if (myAge > 99){ myTemp = myName01 + ' is hundies dead.'}(myBodyTemp > 99){ myTemp2 = myName01 + ' is hundies dead '}
+
    let myBodyTemp = Math.abs(document.getElementById('myBodyTemp01').value)
 
-   if (myBodyTemp <= 4){ myTemp2 = myName01 + ' is freezing.'}
-   if (myBodyTemp >= 12){ myTemp2 = myName01 + ' is cold.'}
-   if (myBodyTemp >=20 && myBodyTemp < 30 ){ myTemp2 = myName01 + ' is chilly.'}
-   if (myBodyTemp >=30 && myBodyTemp < 45 ){ myTemp2 = myName01 + ' has a normal temperature.'}
-   if (myBodyTemp >=45 && myBodyTemp < 65 ){ myTemp2 = myName01 + ' is sweltering and most likely has a fever.'}
-   if (myBodyTemp >=65 && myBodyTemp < 80 ){ myTemp2 = myName01 + ' is burning.'}
-   if (myBodyTemp >= 80){ myTemp2 = myName01 + ' has liquid fire in him and is going to die soon.'}
-   if (myBodyTemp > 99){ myTemp2 = myName01 + ' is hundies dead and burned(to the death).'}
 
 
    document.getElementById('myDiv03').innerHTML = myTemp
-   document.getElementById('myDiv04').innerHTML = myTemp2
+
 }">
 <div id="myDiv03">...</div>
-<div id="myDiv04">...</div>
