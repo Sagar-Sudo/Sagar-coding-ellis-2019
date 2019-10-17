@@ -1,1 +1,113 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<script>
+    let myInterval
+    </script>
 
+<h1 align=center>T1a12-auto-move-Sagar</h1>
+Make all directions (in a table?) replace fred with image<br>
+
+<div id="myDiv01" style="position:absolute; left:200; top:10; " ><b><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQN0iabRfFbpbYJC_-7RqxsAQVN_0-s3XNT73MV9M0K2ctLq9O0"></div>
+
+<input type=button value="Go Right Auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 10
+
+    } ,200)
+
+}"><br>
+<input type=button value="Go Left Auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 10
+
+    } ,200)
+
+}"><br>
+<input type=button value="Go Top Auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
+
+    } ,200)
+
+}"><br>
+<input type=button value="Go Down Auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 10
+
+    } ,200)
+
+}"><br>
+<input type=button value="Go Diagonal-Right Down Auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 10
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) +10
+    } ,200)
+
+}"><br>
+<input type=button value="Go Diagonal-Left Up Auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) -10
+    } ,200)
+
+}"><br>
+<input type=button value="Go Diagonal-Right Down Auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 10
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) -10
+    } ,200)
+
+}"><br>
+<input type=button value="Go Diagonal-Right Up Auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 10
+    } ,200)
+
+}"><br>
