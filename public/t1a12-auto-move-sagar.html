@@ -31,7 +31,7 @@ Make all directions (in a table?) replace fred with image<br>
 
 <div id="myDiv01" style="position:absolute; left:200; top:10; " ><b><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQN0iabRfFbpbYJC_-7RqxsAQVN_0-s3XNT73MV9M0K2ctLq9O0"></div>
 
-<input type=button value="Go Right Auto" onclick="{
+<input id="myForm" type=button value="Go Right Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -41,7 +41,7 @@ Make all directions (in a table?) replace fred with image<br>
     } ,200)
 
 }"><br>
-<input type=button value="Go Left Auto" onclick="{
+<input id="myForm" type=button value="Go Left Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -51,7 +51,7 @@ Make all directions (in a table?) replace fred with image<br>
     } ,200)
 
 }"><br>
-<input type=button value="Go Top Auto" onclick="{
+<input id="myForm" type=button value="Go Top Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -61,7 +61,7 @@ Make all directions (in a table?) replace fred with image<br>
     } ,200)
 
 }"><br>
-<input type=button value="Go Down Auto" onclick="{
+<input id="myForm" type=button value="Go Down Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -71,7 +71,7 @@ Make all directions (in a table?) replace fred with image<br>
     } ,200)
 
 }"><br>
-<input type=button value="Go ↘ Auto" onclick="{
+<input id="myForm" type=button value="Go ↘ Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -81,7 +81,7 @@ Make all directions (in a table?) replace fred with image<br>
     } ,200)
 
 }"><br>
-<input type=button value="Go ↖ Auto" onclick="{
+<input id="myForm" type=button value="Go ↖ Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -91,7 +91,7 @@ Make all directions (in a table?) replace fred with image<br>
     } ,200)
 
 }"><br>
-<input type=button value="Go ↙ Auto" onclick="{
+<input id="myForm" type=button value="Go ↙ Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -101,7 +101,7 @@ Make all directions (in a table?) replace fred with image<br>
     } ,200)
 
 }"><br>
-<input type=button value="Go ↗ Auto" onclick="{
+<input id="myForm" type=button value="Go ↗ Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -111,4 +111,13 @@ Make all directions (in a table?) replace fred with image<br>
     } ,200)
 
 }"><br><br>
-<input type=button value="Reset" onclick="reset">
+<form id="myForm">
+
+  <input type="button" onclick="myFunction()" value="Reset form">
+</form>
+
+<script>
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
+</script>
