@@ -56,7 +56,27 @@ var myObj = {}
 myObj=JSON.parse(document.getElementById('myTextA01').value)
 document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born on '+myObj.birthdate
 }">
+<input type=text id="myText01" value="36.1" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
 
+<script>
+function keydownFunction() {
+  document.getElementById("demo").style.backgroundColor = "red";
+}
+
+function keyupFunction() {
+  document.getElementById("demo").style.backgroundColor = "green";
+}
+</script>>
+
+<script>
+function keydownFunction() {
+  document.getElementById("demo").style.backgroundColor = "red";
+}
+
+function keyupFunction() {
+  document.getElementById("demo").style.backgroundColor = "green";
+}
+</script>
 <br>
 
 <textarea rows="8" cols="70" id="myTextA01" >{
