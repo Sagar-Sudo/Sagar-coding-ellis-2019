@@ -18,19 +18,102 @@ function myHitOther(my1,my2){
    }
 }
 
+
+</script>
+<script>
+   let myInterval
+
 </script>
 
+<img src="Inky.png"  id="myImg01" style="position:absolute; left:200; top:200; width:100; height:100; " />
+<img src="pacman.png"  id="myImg02" style="position:absolute; left:400; top:200; width:100; height:100; " />
 
-<img src="pacman.png"  id="myImg01" style="position:absolute; left:200; top:200; width:100; height:100; " />
-<img src="ghosts.png"  id="myImg02" style="position:absolute; left:400; top:200; width:100; height:100; " />
 
+<body onkeydown="{
 
-<input type=button value="go Right"  onclick="{
-   document.getElementById('myImg01').style.left =
-      parseInt(document.getElementById('myImg01').style.left) + 10
+     let myKey = event.key
+ //  let myKey = String.toLowerCase(event.key)
+
+   if (myKey == 'd') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+
+           document.getElementById('myImg01').style.left =
+               parseInt(document.getElementById('myImg01').style.left) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'w') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+
+           document.getElementById('myImg01').style.top =
+               parseInt(document.getElementById('myImg01').style.top) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 's') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+
+           document.getElementById('myImg01').style.top =
+               parseInt(document.getElementById('myImg01').style.top) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'a') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+
+           document.getElementById('myImg01').style.left =
+               parseInt(document.getElementById('myImg01').style.left) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+    if (myKey == 'A') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+
+           document.getElementById('myImg01').style.left =
+               parseInt(document.getElementById('myImg01').style.left) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'S') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+
+           document.getElementById('myImg01').style.top =
+               parseInt(document.getElementById('myImg01').style.top) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'W') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+
+           document.getElementById('myImg01').style.top =
+               parseInt(document.getElementById('myImg01').style.top) - 5
+           myIsOnScreen()
+       } ,20)
+   }
    if ( myHitOther('myImg01','myImg02') ){
        alert('you lose')
       //document.getElementById('myImg01').style.left = '20px'
    }
+   if (myKey == 'D') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+
+           document.getElementById('myImg01').style.left =
+               parseInt(document.getElementById('myImg01').style.left) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+
+
+
+
 }">
+
 
