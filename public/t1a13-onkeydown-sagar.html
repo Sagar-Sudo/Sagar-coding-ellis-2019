@@ -59,6 +59,9 @@ function myIsOnScreen(){
 <body onkeydown="{
 
      let myKey = event.key
+
+
+
  //  let myKey = String.toLowerCase(event.key)
 
    if (myKey == 'd') {
@@ -205,22 +208,18 @@ function myIsOnScreen(){
            myIsOnScreen()
        } ,20)
    }
-
-
-
+    if (event.key == 'ArrowUp'){
+        document.getElementById('myDiv03').style.top = parseInt(document.getElementById('myDiv03').style.top) - 5
+    }
+    if (event.key == ''){
+        document.getElementById('myDiv03').style.left = parseInt(document.getElementById('myDiv03').style.left) - 5
+    }
+    if (event.key == 's'){
+        document.getElementById('myDiv03').style.top = parseInt(document.getElementById('myDiv03').style.top) + 5
+    }
+    if (event.key == 'd'){
+        document.getElementById('myDiv03').style.left = parseInt(document.getElementById('myDiv03').style.left) + 5
+    }
 
 
 }">
-
-<h1 align=center>Automovement Stuff-Sagar</h1>
-<h2 align=center><i> WASD/wasd/IJKL/ijkl </i></h2>
-<div id="myDiv01" style="position:absolute; left:200; top:200; " ><b><img src="soccer.png"></b></div>
-
-</body>
-
-
-
-
-<div id="myDiv02" style="position:absolute; left:600; top:200; " ><b><img src="vercoolkanye.png"alt="Cycle 1" width="110" height="60"></b></div>
-
-</body>
