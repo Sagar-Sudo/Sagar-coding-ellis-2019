@@ -209,16 +209,16 @@ function myIsOnScreen(){
        } ,20)
    }
     if (event.key == 'ArrowUp'){
-        document.getElementById('myDiv03').style.top = parseInt(document.getElementById('myDiv03').style.top) - 5
+        document.getElementById('myDiv03').style.top = parseInt(document.getElementById('myDiv03').style.top) - 10
     }
-    if (event.key == 'Arrowdown'){
-        document.getElementById('myDiv03').style.left = parseInt(document.getElementById('myDiv03').style.left) - 5
+    if (event.key == 'ArrowLeft'){
+        document.getElementById('myDiv03').style.left = parseInt(document.getElementById('myDiv03').style.left) - 10
     }
-    if (event.key == 's'){
-        document.getElementById('myDiv03').style.top = parseInt(document.getElementById('myDiv03').style.top) + 5
+    if (event.key == 'ArrowDown'){
+        document.getElementById('myDiv03').style.top = parseInt(document.getElementById('myDiv03').style.top) + 10
     }
-    if (event.key == 'd'){
-        document.getElementById('myDiv03').style.left = parseInt(document.getElementById('myDiv03').style.left) + 5
+    if (event.key == 'ArrowRight'){
+        document.getElementById('myDiv03').style.left = parseInt(document.getElementById('myDiv03').style.left) + 10
     }
 
 
@@ -227,3 +227,4 @@ function myIsOnScreen(){
 <h2 align=center><i>WASD/IJKL/Arrows</i><h2>
 <div style="position:absolute; top:200; left:200; " id="myDiv01" ><img src="vercoolkanye.png" width=200 height=100></div>
 <div style="position:absolute; top:200; left:400; " id="myDiv02" ><img src="soccer.png" ></div>
+<div style="position:absolute; top:200; left:400; " id="myDiv03" ><img src="Pinky.png" width=200 height=200 ></div>
