@@ -81,124 +81,36 @@ function myHitOther(my1,my2){
 }">
 </td></tr>
 </table><br>
-<script>
-   let myInterval
-
-function myIsOnScreen(){
-    if (parseInt(document.getElementById('myImg01').style.left) > 800) {
-        document.getElementById('myImg01').style.left = '797px'
-    }
-    if (parseInt(document.getElementById('myImg01').style.top) > 800) {
-        document.getElementById('myImg01').style.top = '797px'
-    }
-     if (parseInt(document.getElementById('myImg01').style.left) < 10) {
-        document.getElementById('myImg01').style.left = '7px'
-    }
-      if (parseInt(document.getElementById('myImg01').style.top) < 10) {
-        document.getElementById('myImg01').style.top = '7px'
-    }
-     if (parseInt(document.getElementById('myDiv02').style.left) > 1200) {
-        document.getElementById('myDiv02').style.left = '1197px'
-    }
-    if (parseInt(document.getElementById('myDiv02').style.top) > 400) {
-        document.getElementById('myDiv02').style.top = '397px'
-    }
-     if (parseInt(document.getElementById('myDiv02').style.left) < 290) {
-        document.getElementById('myDiv02').style.left = '287px'
-    }
-      if (parseInt(document.getElementById('myDiv02').style.top) < 10) {
-        document.getElementById('myDiv02').style.top = '7px'
-    }
-
-
-}
-</script>
-
-<body onkeydown="{
-
-     let myKey = event.key
-
-
-
- //  let myKey = String.toLowerCase(event.key)
-
-    if (event.key == 'ArrowUp'){
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myDiv03').style.top) - 10
-    }
-    if (event.key == 'ArrowLeft'){
-        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myDiv03').style.left) - 10
-    }
-    if (event.key == 'ArrowDown'){
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myDiv03').style.top) + 10
-    }
-    if (event.key == 'ArrowRight'){
-        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myDiv03').style.left) + 10
-    }
-    if (event.key == 'w'){
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myDiv03').style.top) - 10
-    }
-    if (event.key == 'a'){
-        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myDiv03').style.left) - 10
-    }
-    if (event.key == 's'){
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myDiv03').style.top) + 10
-    }
-    if (event.key == 'd'){
-        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myDiv03').style.left) + 10
-    }
+<table border=3>
+<tr><td>
+<input type=button value="Go Left"  onclick="{
+   document.getElementById('myImg02').style.left =
+      parseInt(document.getElementById('myImg02').style.left) - 10
+   if ( myHitOther('myImg02','myImg01') ){
+      document.getElementById('myImg02').style.left = '20px'
+   }
 }">
 
-<script>
-    let myInterval
-    </script>
-
-<input id="myForm" type=button value="Go Top Auto" onclick="{
-
-    clearInterval(myInterval)
-    myInterval = setInterval(function(){
-
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 5
-
-    } ,20)
-
+</td><td><input type=button value="Go Up"  onclick="{
+   document.getElementById('myImg02').style.top =
+      parseInt(document.getElementById('myImg02').style.top) - 10
+   if ( myHitOther('myImg02','myImg01') ){
+      document.getElementById('myImg02').style.left = '20px'
+   }
+}"></td></tr>
+<tr><td><input type=button value="Go Down"  onclick="{
+   document.getElementById('myImg02').style.top =
+      parseInt(document.getElementById('myImg01').style.top) + 10
+   if ( myHitOther('myImg02','myImg01') ){
+      document.getElementById('myImg02').style.left = '20px'
+   }
 }">
-<input id="myForm" type=button value="Go Top down" onclick="{
-
-    clearInterval(myInterval)
-    myInterval = setInterval(function(){
-
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 5
-
-    } ,20)
-
+</td><td><input type=button value="Go Right"  onclick="{
+   document.getElementById('myImg02').style.left =
+      parseInt(document.getElementById('myImg02').style.left) + 10
+   if ( myHitOther('myImg02','myImg01') ){
+      document.getElementById('myImg02').style.left = '20px'
+   }
 }">
-<input id="myForm" type=button value="Go Top left" onclick="{
-
-    clearInterval(myInterval)
-    myInterval = setInterval(function(){
-
-        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 5
-
-    } ,20)
-
-}">
-<input id="myForm" type=button value="Go Top rigjht" onclick="{
-
-    clearInterval(myInterval)
-    myInterval = setInterval(function(){
-
-        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 5
-
-    } ,20)
-
-}">
-<input id="myForm" type=button value="Stop" onclick="{
-
-    clearInterval(myInterval)
-    myInterval = setInterval(function(){
-
-        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) = 0
-
-    } ,20)
-
-}">
+</td></tr>
+</table><br>
