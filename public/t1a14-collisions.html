@@ -23,6 +23,8 @@
 </head>
 </div>
 <script>
+
+    let myInterval
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -48,9 +50,9 @@ function myHitOther(my1,my2){
 
 <table border=3>
 <tr><td>
-<input type=button value="Go Right"  onclick="{
+<input type=button value="Go Left"  onclick="{
    document.getElementById('myImg01').style.left =
-      parseInt(document.getElementById('myImg01').style.left) + 10
+      parseInt(document.getElementById('myImg01').style.left) - 10
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
    }
@@ -70,14 +72,48 @@ function myHitOther(my1,my2){
       document.getElementById('myImg01').style.left = '20px'
    }
 }">
-</td><td><input type=button value="Go Left"  onclick="{
+</td><td><input type=button value="Go Right"  onclick="{
    document.getElementById('myImg01').style.left =
-      parseInt(document.getElementById('myImg01').style.left) - 10
+      parseInt(document.getElementById('myImg01').style.left) + 10
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
    }
-}"></td></tr>
+}">
+</td></tr>
 </table><br>
+<script>
+   let myInterval
+
+function myIsOnScreen(){
+    if (parseInt(document.getElementById('myImg01').style.left) > 800) {
+        document.getElementById('myImg01').style.left = '797px'
+    }
+    if (parseInt(document.getElementById('myImg01').style.top) > 800) {
+        document.getElementById('myImg01').style.top = '797px'
+    }
+     if (parseInt(document.getElementById('myImg01').style.left) < 10) {
+        document.getElementById('myImg01').style.left = '7px'
+    }
+      if (parseInt(document.getElementById('myImg01').style.top) < 10) {
+        document.getElementById('myImg01').style.top = '7px'
+    }
+     if (parseInt(document.getElementById('myDiv02').style.left) > 1200) {
+        document.getElementById('myDiv02').style.left = '1197px'
+    }
+    if (parseInt(document.getElementById('myDiv02').style.top) > 400) {
+        document.getElementById('myDiv02').style.top = '397px'
+    }
+     if (parseInt(document.getElementById('myDiv02').style.left) < 290) {
+        document.getElementById('myDiv02').style.left = '287px'
+    }
+      if (parseInt(document.getElementById('myDiv02').style.top) < 10) {
+        document.getElementById('myDiv02').style.top = '7px'
+    }
+
+
+}
+</script>
+
 <body onkeydown="{
 
      let myKey = event.key
@@ -98,13 +134,70 @@ function myHitOther(my1,my2){
     if (event.key == 'ArrowRight'){
         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myDiv03').style.left) + 10
     }
+    if (event.key == 'w'){
+        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myDiv03').style.top) - 10
+    }
+    if (event.key == 'a'){
+        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myDiv03').style.left) - 10
+    }
+    if (event.key == 's'){
+        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myDiv03').style.top) + 10
+    }
+    if (event.key == 'd'){
+        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myDiv03').style.left) + 10
+    }
 }">
+
+<script>
+    let myInterval
+    </script>
+
 <input id="myForm" type=button value="Go Top Auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
 
         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 5
+
+    } ,20)
+
+}">
+<input id="myForm" type=button value="Go Top down" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 5
+
+    } ,20)
+
+}">
+<input id="myForm" type=button value="Go Top left" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 5
+
+    } ,20)
+
+}">
+<input id="myForm" type=button value="Go Top rigjht" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 5
+
+    } ,20)
+
+}">
+<input id="myForm" type=button value="Stop" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) = 0
 
     } ,20)
 

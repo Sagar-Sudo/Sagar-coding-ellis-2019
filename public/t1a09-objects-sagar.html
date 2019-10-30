@@ -34,8 +34,16 @@ Input the items into objects.<br>
 
 <body id="myBody">
 
-Body Temp: <input type=text id="myText01" value="36.1">°C
+Body Temp: <input type=text id="myText02" value="36.1">°C
+<input type=button value="clickme" onclick="{
+   let  myObjectArray = {myText01};
 
+    let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
+    document.getElementById('myDiv02').value = myPrintout
+    document.getElementById('myText01').innerHTML = 'This man`s name is ' + myObjectArray + '.'
+}">
+<div id="myText01" value="36.1"></div>
+<div id="myDiv02"></div>
 <br>
 <input type=button value="First Name" id="button01"onclick="{
 var myObj = {}

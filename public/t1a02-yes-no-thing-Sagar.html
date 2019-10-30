@@ -24,7 +24,7 @@
 </div>
 <h1> Yes No Thing </h1>
 <i> Yes = Yes, Else = </i><br>
-<input type= text id="myText01" value="Yes"><br>
+<input type= text id="myText01" value="Yes" style="color:gold; background-color:black" ><br>
 
 <input type=button value=run onClick="{
 let myTemp = document.getElementById('myText01').value
@@ -42,4 +42,27 @@ else
 
 
 
-<div id="myDiv01">...</div>
+<div id="myDiv01" style="background-color: lightgrey; color:darkgreen; " >...</div>
+
+<!--2.0-->
+
+
+<input type= text id="myText01" value="Awesome" style="color:black; background-color:gold" ><br>
+
+<input type=button value=run onClick="{
+let myTemp = document.getElementById('myText01').value
+if (myTemp == 'Yes')
+{
+    document.getElementById('myDiv02').innerHTML = ('Lit lit man')
+}
+else
+{
+    document.getElementById('myDiv02').innerHTML = ('No thats not ok!')
+    }
+}">
+<br>
+
+
+
+
+<div id="myDiv02" style="background-color: darkgreen; color:lightgrey; " >...</div>
