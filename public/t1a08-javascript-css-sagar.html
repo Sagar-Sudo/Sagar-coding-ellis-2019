@@ -25,17 +25,34 @@
 </div>
 
 <h1>t1ao8-Javascript-CSS-Sagar.html</h1>
-
-<input type=button value="Change" onclick="{
+<br><br>
+<table border=1>
+<tr><td><input type=button value="Change" onclick="{
     document.getElementById('myB01').style.color = ('red')
-}">
+}"></td><td><input type=button value="Change" onclick="{
+    document.getElementById('myB01').style.color = ('green')
+}"></td></tr>
+<tr><td><input type=button value="Change" onclick="{
+    document.getElementById('myB01').style.color = ('gold')
+}"></td><td><input type=button value="Change" onclick="{
+    document.getElementById('myB01').style.color = ('grey')
+}"></td></tr>
+
+<tr><td><input type=button value="Change" onclick="{
+    document.getElementById('myB01').style.color = ('blue')
+}"></td><td><input type=button value="Change" onclick="{
+    document.getElementById('myB01').style.color = ('black')
+}"></td></tr>
+
+
+</table><br>
+
+
+
 <b id="myB01" style="color:black"> <span style="border-color: red;  border-style: ridge; width:
 150px;" >
-
-<br><input type=button value="Change" onclick="{
-    document.getElementById('myB01').style.color = ('blue')
-}">
-Wassup this pretty lit!
+<br>
+Wassup this pretty lit!<br>
 </span><b><br><br>
 <select id="myText01" size=1 onChange="{
     let myTemp = document.getElementById('myText01').value
@@ -57,14 +74,20 @@ Wassup this pretty lit!
 <span id="myDiv01" style="border-style:groove; border-width:5;
 border-color:red" >
 This is a box</span><br><br><br><br>
-<img><textarea id="myImage01" rows=10 cols=50
-style="background-image:
-url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRq-SM3EMV8NecWkaSACY1qpH-4kiVL51NnztDmU0MEU1Bk-uCE')"></textarea><br>
-</img>
+<html>
+<head>
+<style>
+img {
+  border-radius: 8px;
+}
+</style>
+</head>
+<img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRq-SM3EMV8NecWkaSACY1qpH-4kiVL51NnztDmU0MEU1Bk-uCE"
+>
 
-<html>
-<html>
-<body>
+
+<br>This image has rounded corners.
 
 <h1 style="">Date</h1>
 
@@ -73,6 +96,4 @@ onclick="document.getElementById('demo').innerHTML = Date()">
 Clickme :)</button>
 
 <p id="demo"></p>
-
-</body>
-</html>
+This image has rounded corners.
