@@ -40,14 +40,14 @@
 }">
 
 <input style="color:orange; background-color: black " type=button value="Show Array Object" onclick="{
-    let myArrayObject = ['milk', 'Candy', 'Chicken', 'pop', ];
+    let myArrayObject = ['milk', 'Candy', 'Chicken', 'pop', {Name:'Hershey', Type:'Food', Edible:'Yessir'} ];
 
     let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
     document.getElementById('myTextArea02').value = myPrintout
     document.getElementById('myDiv02').innerHTML = 'I like to drink ' + myArrayObject[0] + '.'
     document.getElementById('myDiv03').innerHTML =  myArrayObject[1] + ' is something I eat a lot.'
     document.getElementById('myDiv04').innerHTML =  myArrayObject[2] + ' is delicious.'
-    document.getElementById('myDiv05').innerHTML =  'I`ll drink any kind of ' + myArrayObject[3] + ' any day.'
+    document.getElementById('myDiv05').innerHTML =  'I`ll eat ' + myArrayObject[4].Name + '`s any day.' + myArrayObject[4].Edible + ' they are very good.'
 
 
 }"><br>
