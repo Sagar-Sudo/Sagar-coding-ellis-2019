@@ -39,4 +39,22 @@
 
    document.getElementById('myDiv03').innerHTML = myTemp
 }">
-<div id="myDiv03">...</div>
+<div id="myDiv03">...</div><br><br><br>
+<h2><i>Now do yourself</i></h2>
+<input style="background-color:gold; color:blue; " type=text id="myName02" value=" "><br>
+<input style="background-color:gold; color:blue; " type=text id="myAge02" value=" "><br>
+
+<input type=button value=run onclick="{
+   let myAge = Math.abs(document.getElementById('myAge02').value)
+   let myName02 = document.getElementById('myName02').value
+   let myTemp = myName02 + ' is a teen.'
+   if (myAge <= 12){ myTemp = myName02 + ' is a child.'}
+   if (myAge >=20 && myAge < 65 ){ myTemp = myName02 + ' is an adult.'}
+   if (myAge >=65 && myAge < 80 ){ myTemp = myName02 + ' must retire.'}
+   if (myAge >= 80){ myTemp = myName02 + ' is going to die soon.'}
+   if (myAge > 99){ myTemp = myName02 + ' is hundies dead.'}
+
+
+   document.getElementById('myDiv04').innerHTML = myTemp
+}">
+<div id="myDiv04">...</div>
