@@ -1,3 +1,14 @@
+<style>
+
+h1 
+ {
+  border-style: outset;
+  border-width: 7px;
+  border-color: coral;
+  height: 600
+  width:600
+}
+</style>
 <div>
 <head>
 <style>
@@ -24,15 +35,50 @@
 </div>
 
 <h1 align=center>Calculator by Sagar</h1>
+<h2 align=center>
+<input style="background-color:gold; " id="myText01"  type=text value="1"  >
+<select id="myText02" size=1 style="background-color:gold;" onchange="{
+    let myTemp = document.getElementById('myText01').value
+    document.getElementById('myDiv01').style.borderStyle = myTemp
+}">
+<option style="color:red" value="+">+
+<option style="color:red"value="−">−
+<option style="color:red"value="×">×
+<option style="color:red"value="/">/
 
-<body style="background-color:black; " >
+</select> 
+<br>
 
-<input id="myDiv01" type="text"><select id="mySelect01" size=1>
-<option value='myOne'>+
-<option value='myTwo'>-
-<option value='myThree'>/
-<option value='myFour'>x
+<input style="background-color:gold; color:navy; " id="myText03"  type=text value="2"  >
 
-</select>
+<input type=button size="2" value="=" onclick="{
+   myNum1 = parseFloat(document.getElementById('myText01').value)
+   myNum2 =parseFloat(document.getElementById('myText03').value)
+   mySign = document.getElementById('myText02').value
+   myTotal = 0
+  if (mySign == '+'){
+    myTotal = myNum1 + myNum2
+  }
+  else if (mySign == '−'){
+    myTotal = myNum1 - myNum2
+  }
+  else if (mySign == '×'){
+    myTotal = myNum1 * myNum2
+  }
+  else if (mySign == '/'){
+    myTotal = myNum1 / myNum2
+  }
+  
+      document.getElementById('myDiv01').innerHTML =  myNum1 + ' ' +   mySign +' '+ myNum2 +' = '+ myTotal + '<br>' + document.getElementById('myDiv01').innerHTML;
+}" >
+</td></tr></table>
 
-<input id="myDiv01" type="text"><br>
+<p><b>You can use: + - x /</p>
+<i><strong><b><h3>Answers' Storage Box:</h3></b></strong></i>
+<table align= center border=10 style="background-color:black; color:red; "height="50" width="150">
+<tr><td>
+<input type=button value="Clear" onClick="{
+    document.getElementById('myDiv01').innerHTML =  ''
+}" >
+<div id="myDiv01"  ><br> </div>
+</h2>
