@@ -23,6 +23,31 @@
 </head>
 </div>
 <h1>These are my gifs.</h1>
-<img src="New Piskel.gif" height="200">
-<img src="glass.gif"height="200">
-<img src="donut2.gif" align=center>
+<img src="New Piskel.gif" height="200"><br>
+<img src="glass.gif"height="200"><br>
+<img src="donut2.gif" ><br>
+<img src="pat-man.gif" id="MyPat01"style="position:absolute; top:200; left:200; "><br>
+<body onkeydown="{
+
+     let myKey = event.key
+
+
+
+ //  let myKey = String.toLowerCase(event.key)
+
+
+    if (event.key == 'ArrowUp'){
+        document.getElementById('MyPat01').style.top = parseInt(document.getElementById('MyPat01').style.top) - 10
+    }
+    if (event.key == 'ArrowLeft'){
+        document.getElementById('MyPat01').style.left = parseInt(document.getElementById('MyPat01').style.left) - 10
+    }
+    if (event.key == 'ArrowDown'){
+        document.getElementById('MyPat01').style.top = parseInt(document.getElementById('MyPat01').style.top) + 10
+    }
+    if (event.key == 'ArrowRight'){
+        document.getElementById('MyPat01').style.left = parseInt(document.getElementById('MyPat01').style.left) + 10
+    }
+
+
+}">
