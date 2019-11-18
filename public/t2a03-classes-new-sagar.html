@@ -25,7 +25,7 @@
 
 <h2 align=center>Javascript Classes by Sagar</h2>
 <input type=text id="myNameInput" placeholder="Enter an animal name here"
-value="">
+value=""><br><br>
 
 <input id="myButton01" type="button" value="Make and Show the class myAnimal"
 onclick="{
@@ -55,9 +55,47 @@ onclick="{
     <input  type="button" value="Initialize Speak" onclick="{
         responsiveVoice.speak('Classes make you seem like a better programmer than you are.', 'US English Female', {pitch: 1, rate:1, volume : 1})
         
+    }"><br>
+    <input  type="button" value="Initialize Speak" onclick="{
+        responsiveVoice.speak('I`m not sure if french people even code. ', 'French Female', {pitch: 1, rate:1, volume : 1})
+        
+    }"><br>
+    <input  type="button" value="Initialize Speak" onclick="{
+        responsiveVoice.speak('I like pasta. A lot of pasta ', 'Italian Female', {pitch: 1, rate:1, volume : 1})
+        
     }"><br><br>
 
+<input id="myButton02" type="button" value="Extend a Class" onclick="{
+class myAnimal {
+    constructor(passName, passAge, passColor, passPaw) {
+        this.myName = passName;
+        this.myAge = passAge; 
+        this.myColor = passColor;
+        this.myPaw = passPaw;
+    }
+    myShow(){
+        document.getElementById('myDiv02').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+ }   // end class myAnimal { 
+     
+class myCat extends myAnimal {
+    
+    myShow(){
+      document.getElementById('myDiv02').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>' + ' He has ' + this.myColor + ' hair.' + ' He has ' + this.myPaw + ' paws.'
+      
+    }
+    
+}    // end extended class myCat
 
+
+
+
+
+   myPet = new myCat('Poofy', 14, 'red', 'small')
+   myPet.myShow()
+ }"><br><br>
+
+ <div id='myDiv02'>...</div><br>
 
 
 
