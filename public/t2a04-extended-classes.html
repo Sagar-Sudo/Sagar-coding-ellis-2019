@@ -1,0 +1,93 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<h1 align=center>T2a05 Extended classes by Sagar</h1>
+<input id="myButton02" type="button" value="Extend a Class" onclick="{
+class myAnimal {
+    constructor(passName, passAge, passColor, passPaw) {
+        this.myName = passName;
+        this.myAge = passAge; 
+        this.myColor = passColor;
+        this.myPaw = passPaw;
+    }
+    myShow(){
+        document.getElementById('myDiv02').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+ }   // end class myAnimal { 
+     
+class myCat extends myAnimal {
+    
+    myShow(){
+      document.getElementById('myDiv02').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>' + ' He has ' + this.myColor + ' hair.' + ' He has ' + this.myPaw + ' paws.'
+      
+    }
+    
+}    // end extended class myCat
+
+
+
+
+
+   myPet = new myCat('Poofy', 14, 'red', 'small')
+   myPet.myShow()
+ }"><br><br>
+
+ <div id='myDiv02'>...</div><br>
+
+
+
+
+<input id="myButton03" type="button" value="Extend a Class" onclick="{
+class myAnimal {
+    constructor(passName, passAge, passColor, passPaw) {
+        this.myName = passName;
+        this.myAge = passAge; 
+        this.myColor = passColor;
+        this.myPaw = passPaw;
+    }
+    myShow(){
+        document.getElementById('myDiv03').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+ }   // end class myAnimal { 
+     
+class myCat extends myAnimal {
+    
+    myShow(){
+      document.getElementById('myDiv03').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>' + ' He has ' + this.myColor + ' hair.' + ' He has ' + this.myPaw + ' paws.'
+      
+    }
+    
+}    // end extended class myCat
+
+
+
+
+
+   myPet = new myCat('Poofy', 14, 'red', 'small')
+   myPet.myShow()
+ }"><br><br>
+
+ <div id='myDiv03'>...</div><br>
+
+        
