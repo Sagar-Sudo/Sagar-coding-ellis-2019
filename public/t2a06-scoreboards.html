@@ -54,5 +54,8 @@ function myHitOther(my1,my2){
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
       document.getElementById('myText01').value = 1 + parseInt(document.getElementById('myText01').value)
+      mySound1.play()
    }
-}">
+}"><br>
+
+<script>    let mySound1 = new Audio()
