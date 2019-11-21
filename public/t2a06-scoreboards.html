@@ -58,4 +58,15 @@ function myHitOther(my1,my2){
    }
 }"><br>
 
-<script>    let mySound1 = new Audio()
+<script>    let mySound1 = new Audio('laughsound.mp3') 
+</script>
+
+<inpuy type=button value=sound2 onclick="{
+  mySound1.play()
+}">
+<input type="button" value="Fast Button" onTouchStart="{
+    this.click();
+    event.preventDefault();
+ }"  onclick="{
+    location 'https://google.ca'
+}"><br><br>
