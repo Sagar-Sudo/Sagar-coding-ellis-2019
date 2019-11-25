@@ -1,6 +1,6 @@
-<div>
+<div id="myImage02" >
 <head>
-<style>
+<style> 
           body {
 		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
 			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
@@ -18,7 +18,7 @@
               border-radius: 12px;
               transition: filter 0.7s, background-image 0.7s;
 			  background-color: #e1e4ea;
-          }
+          }          
 </style>
 </head>
 </div>
@@ -40,8 +40,8 @@
   
 }">
 <input id="myButton02" type=button value="background move right" onclick="{
-    myTemp = '100px 0px'
-    myGlobalX = 5
+    myTemp = '0px 100px'
+    myGlobalX -= 5
     myTemp = myGlobalX + 'px 0px'
     document.getElementById('myBody').style.backgroundPosition = myTemp
   
@@ -51,14 +51,14 @@
     clearInterval(myClock)
     myClock = setInterval(function(){
         document.getElementById('myButton01').click()
-    }, 100)
+    }, 100) 
   
 }">
 <input type=button value="Auto Background right" onclick="{
     clearInterval(myClock)
     myClock = setInterval(function(){
-        document.getElementById('myButton02').click()
-    }, -10)
+        document.getElementById('myButton02').click() 
+    }, -100)
   
 }">
 
@@ -66,6 +66,8 @@
 <input type=button value="Image Right" onclick="{
     document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
 }"><br><br>
+<input type=button value="Image Left" onclick="{
+    document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + -10 + 'px'
+}"><br><br>
 
-
-<img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="vercoolkanye.png">
+<img id="myImage01" style="position:relative; width:240px; height:80px; top:0px; left:0px;" src="vercoolkanye.png">
