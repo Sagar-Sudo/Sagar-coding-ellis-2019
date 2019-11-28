@@ -41,8 +41,8 @@ You use loops and variables to make fast fancy drawings <br><br>
     myContext.stroke();
     myContext.color(document.getElementById('myColor01').value)
 }">
-
-<input type=text id="myText01" value=" " onmouseover="{
+<input type=text id="myText01" >
+<input type=button  value="Click" onclick="{
     myContext.font = '20px Arial';
     myContext.fillText(document.getElementById('myText01').value, 400, 100);
     myContext.translate(400, 100);
@@ -50,6 +50,7 @@ You use loops and variables to make fast fancy drawings <br><br>
     myContext.fillText(document.getElementById('myText01').value, 10, 10);
     myContext.stroke();
     myContext.resetTransfrom();
+    myContext.color(document.getElementById('myColor01').innerHTML)
     //myContext.rotate(-60 * Math.PI / 180);
 }">
 
