@@ -1,0 +1,49 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<h1 align=center> Local Storage by Sagar </h1>
+
+<body onload="{
+    myStorage = localStorage.getItem('myStoredText')
+    if(myStorage  != null){
+        document.getElementById('myText1').value = myStorage
+    }
+}">
+
+<body onunload="{
+    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
+}">
+
+Text Example: <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
+
+<input type="button" value="Store Text" onclick="{
+    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
+    alert(document.getElementById('myText1').value + ' \nHas been stored')
+    document.getElementById('myText1').value = ''
+}">
+
+<input type="button" value="Retrieve Text" onclick="{
+    document.getElementById('myText1').value = localStorage.getitem('myStoredText')
+    alert(document.getElementById('myText1').value + ' \nHas been retrieved')
+}">
