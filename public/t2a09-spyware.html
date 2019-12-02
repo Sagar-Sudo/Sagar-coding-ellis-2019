@@ -23,6 +23,7 @@
 </head>
 </div>
 <h1 align=center>t2a09 Spyware by Sagar</h1>
+<form id="myForm01">
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br>
 
 
@@ -162,5 +163,12 @@
 
 }"><br>
 
-
+<form id="myForm01">
 <textarea id="myArea03" rows=4 cols=70></textarea><br>
+</form>
+<input type="button" onclick="myFunction()" value="Reset">
+<script>
+function myFunction() {
+  document.getElementById("myForm01").reset();
+}
+</script>
