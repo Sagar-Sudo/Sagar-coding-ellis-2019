@@ -25,25 +25,35 @@
 <h1 align=center> Local Storage by Sagar </h1>
 
 <body onload="{
-    myStorage = localStorage.getItem('myStoredText')
-    if(myStorage  != null){
-        document.getElementById('myText1').value = myStorage
-    }
+   myStorage = localStorage.getItem('myStoredText')           
+   if(myStorage  !=null){
+      document.getElementById('myText01').value = myStorage        
+    }          
 }">
-
+  
 <body onunload="{
-    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
+   localstorage.setItem('myStoredText', document.getElementById('myText01').value)             
 }">
+  <input id="myText01" type=text size=70 value="" placeholder="write here to store stuff"><br>
+  
+<input type="button" value="store text" onclick="{
+  localStorage.setItem('myStoredText', document.getElementById('myText01').value)                                               
 
-Text Example: <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
-
-<input type="button" value="Store Text" onclick="{
-    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-    alert(document.getElementById('myText1').value + ' \nHas been stored')
-    document.getElementById('myText1').value = ''
-}">
-
-<input type="button" value="Retrieve Text" onclick="{
-    document.getElementById('myText1').value = localStorage.getitem('myStoredText')
-    alert(document.getElementById('myText1').value + ' \nHas been retrieved')
-}">
+  document.getElementById('myText01').value = ''                                               
+}">              
+              
+<input type="button" value="retrive text" onclick="{ 
+ document.getElementById('myText01').value = localStorage.getItem('myStoredText')            
+}">      
+<br>
+<!--2-->
+<input type=button value=Image onclick="{
+  localStorage.setItem('myStoredText', document.getElementById('myFile01').value)                                               
+  alert(document.getElementById('myFile01').value + ' \nHas been stored')
+  document.getElementById('myFile01').value = ''                                               
+}">              
+<input type=file id="myFile01">
+<textarea cols=70 rows=4 id="myTextArea01"></textarea><br>
+<input type="button" value="retrive text" onclick="{ 
+ document.getElementById('myTextArea01').value = localStorage.getItem('myFile01')            
+}">  
