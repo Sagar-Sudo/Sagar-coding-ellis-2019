@@ -67,14 +67,14 @@ class myAnimal {
         this.myPaw = passPaw;
     }
     myShow(){
-        document.getElementById('myDiv03').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+        document.getElementById('myDiv03').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old. That`s very old, yes.<br>'
     }
  }   // end class myAnimal { 
      
 class myCat extends myAnimal {
     
     myShow(){
-      document.getElementById('myDiv03').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>' + ' He has ' + this.myColor + ' hair.' + ' He has ' + this.myPaw + ' paws.'
+      document.getElementById('myDiv03').innerHTML = this.myName + ' is a great mouse who is ' + this.myAge + ' years old<br>' + ' He has ' + this.myColor + ' skin.' + ' He has ' + this.myPaw + ' toes.'
       
     }
     
@@ -84,10 +84,42 @@ class myCat extends myAnimal {
 
 
 
-   myPet = new myCat('Poofy', 14, 'red', 'small')
+   myPet = new myCat('Goofy', 87, 'green', 'small')
    myPet.myShow()
  }"><br><br>
 
  <div id='myDiv03'>...</div><br>
+
+<input id="myButton04" type="button" value="Extend a Class" onclick="{
+class myAnimal {
+    constructor(passName, passAge, passColor, passPaw) {
+        this.myName = passName;
+        this.myAge = passAge; 
+        this.myColor = passColor;
+        this.myPaw = passPaw;
+    }
+    myShow(){
+        document.getElementById('myDiv04').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old. That`s not very old, no.<br>'
+    }
+ }   // end class myAnimal { 
+     
+class myCat extends myAnimal {
+    
+    myShow(){
+      document.getElementById('myDiv04').innerHTML = this.myName + ' is mentally challenged who is ' + this.myAge + ' years old<br>' + ' He has ' + this.myColor + ' eyes.' + ' He is a ' + this.myPaw 
+      
+    }
+    
+}    // end extended class myCat
+
+
+
+
+
+   myPet = new myCat('Owenielle', 2, 'blue', 'midget')
+   myPet.myShow()
+ }"><br><br>
+
+ <div id='myDiv04'>...</div><br>
 
         
