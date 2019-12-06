@@ -54,8 +54,7 @@ function myHitOther(my1,my2){
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
       document.getElementById('myText01').value = 1 + parseInt(document.getElementById('myText01').value)
-      mySound1.play()
-      var audio = new Audio('laughsound.mp3');
+      let audio = new Audio('laughsound.mp3');
 audio.play();
    }
 }"><br>
@@ -65,20 +64,9 @@ audio.play();
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
       document.getElementById('myText01').value = 1 + parseInt(document.getElementById('myText01').value)
-      mySound1.play()
-      let mySound1 = new Audio('airhorn.ogg');
+      let audio = new Audio('airhorn.ogg');
       audio.play();
    }
 }">
 
 
-
-<input type="button" value="sound" onclick="{
-    audio.play();
-}">
-<input type="button" value="Fast Button" onTouchStart="{
-    this.click();
-    event.preventDefault();
- }"  onclick="{
-     location 'https://google.ca'
-}"><br><br>
