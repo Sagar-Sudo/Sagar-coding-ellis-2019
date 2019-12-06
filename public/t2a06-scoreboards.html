@@ -54,19 +54,12 @@ function myHitOther(my1,my2){
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
       document.getElementById('myText01').value = 1 + parseInt(document.getElementById('myText01').value)
-      let audio = new Audio('laughsound.mp3');
+      let audio = new Audio('tinkle.mp3');
 audio.play();
    }
 }"><br>
-<input type=button value="go Left"  onclick="{
-   document.getElementById('myImg01').style.left = 
-      parseInt(document.getElementById('myImg01').style.left) - 10
-   if ( myHitOther('myImg01','myImg02') ){
-      document.getElementById('myImg01').style.left = '20px'
-      document.getElementById('myText01').value = 1 + parseInt(document.getElementById('myText01').value)
-      let audio = new Audio('airhorn.ogg');
-      audio.play();
-   }
-}">
 
 
+
+<input type="button" onclick="{
+    let "
