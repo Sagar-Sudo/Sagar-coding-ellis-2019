@@ -1,0 +1,97 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+
+<style>
+
+h1 { 
+  border-style: outset;
+  border-width: 7px;
+  border-color: coral;
+}
+
+ {
+  border-style: outset;
+  border-width: 7px;
+  border-color: coral;
+}
+h2 {
+  border-style: ridge;
+  border-width: 5px;
+  border-color: gold;  
+}
+
+ { 
+  border-style: ridge;
+  border-width: 5px;
+  border-color: gold;  
+}
+</style>
+<h1 align=center><strong><b>T2A11 Game by Sagar</b></strong></h1>
+<div id="myDiv01" style="position:absolute; left:250; top:100; " ><b><img src="pat-man.gif"></b></div>
+<input type=button value=Run ononline="{
+    
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 5
+    } ,20)
+
+}">
+<script>
+   let myInterval
+
+function myIsOnScreen(){
+    if (parseInt(document.getElementById('myDiv01').style.left) > 800) {
+        document.getElementById('myDiv01').style.left = '797px'
+    }
+    if (parseInt(document.getElementById('myDiv01').style.top) > 800) {
+        document.getElementById('myDiv01').style.top = '797px'
+    }
+     if (parseInt(document.getElementById('myDiv01').style.left) < 10) {
+        document.getElementById('myDiv01').style.left = '7px'
+    }
+      if (parseInt(document.getElementById('myDiv01').style.top) < 10) {
+        document.getElementById('myDiv01').style.top = '7px'
+    }
+     if (parseInt(document.getElementById('myDiv02').style.left) > 1200) {
+        document.getElementById('myDiv02').style.left = '1197px'
+    }
+    if (parseInt(document.getElementById('myDiv02').style.top) > 400) {
+        document.getElementById('myDiv02').style.top = '397px'
+    }
+     if (parseInt(document.getElementById('myDiv02').style.left) < 290) {
+        document.getElementById('myDiv02').style.left = '287px'
+    }
+      if (parseInt(document.getElementById('myDiv02').style.top) < 10) {
+        document.getElementById('myDiv02').style.top = '7px'
+    }
+
+
+}
+</script>
+
+
+
+<h2 a><a href="game.level1.html">Start</a></h2>
