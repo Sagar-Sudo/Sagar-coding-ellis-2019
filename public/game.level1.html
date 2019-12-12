@@ -3,7 +3,7 @@
 <style>
           body {
 		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
-			  background:white url(https://image.freepik.com/free-vector/dark-damask-seamless-pattern-background-elegant-luxury-texture-wallpapers_1217-1174.jpg)
+			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
           }
 		  iframe {
 			  transition: filter 0.7s;
@@ -26,15 +26,35 @@
 
 <html>
 <head>
-<style>
+<style id=myStyle>
 canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
-}
+}          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://image.freepik.com/free-vector/dark-damask-seamless-pattern-background-elegant-luxury-texture-wallpapers_1217-1174.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
 </style>
 </head>
 <body onload="startGame()">
+
+
 <script>
+
+let myGlobalX = 0
+let myClock
 
 let myGamePiece;
 let myObstacles = [];
@@ -50,8 +70,8 @@ function startGame() {
 let myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 680;
-        this.canvas.height = 370;
+        this.canvas.width = 1080;
+        this.canvas.height = 770;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -161,6 +181,14 @@ function accelerate(n) {
 }
 </script>
 <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">Jump</button>
+<input type=button value=Jump onmousedown="accelerate(-0.2)" onmouseup="{
+    accelerate(0.05)
+    myTemp = '100px 0px'
+    myClock = setInterval(function(){
+        myGlobalX -= 5
+        myTemp = myGlobalX + 'px 0px'
+        document.getElementById('myStyle').style.backgroundPosition = myTemp
+    }, 100)
+}">
 </body>
 </html>
