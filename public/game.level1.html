@@ -1,28 +1,3 @@
-<div>
-<head>
-<style>
-          body {
-		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
-			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
-          }
-		  iframe {
-			  transition: filter 0.7s;
-		  }
-          * {
-		      font-family: Arial, Helvetica, sans-serif;
-		  }
-          #main {
-              margin: auto;
-              top: 100%;
-              width: 50.000em;
-              border-radius: 12px;
-              transition: filter 0.7s, background-image 0.7s;
-			  background-color: #e1e4ea;
-          }
-</style>
-</head>
-</div>
-
 
 <html>
 <head>
@@ -46,9 +21,10 @@ canvas {
               transition: filter 0.7s, background-image 0.7s;
 			  background-color: #e1e4ea;
           }
+          
 </style>
 </head>
-<body onload="startGame()">
+<body onload="startGame()" align=center>
 
 
 <script>
@@ -70,8 +46,8 @@ function startGame() {
 let myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 1080;
-        this.canvas.height = 770;
+        this.canvas.width = 880;
+        this.canvas.height = 570;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -187,8 +163,9 @@ function accelerate(n) {
     myClock = setInterval(function(){
         myGlobalX -= 5
         myTemp = myGlobalX + 'px 0px'
-        document.getElementById('myStyle').style.backgroundPosition = myTemp
+        document.getElementById('myBody').style.backgroundPosition = myTemp
     }, 100)
 }">
 </body>
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01">
 </html>
