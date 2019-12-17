@@ -1,7 +1,8 @@
 
 <html>
 <head>
-<style id=myStyle>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
 canvas {
 }          body {
 		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
@@ -22,16 +23,6 @@ canvas {
 			  background-color: #e1e4ea;
           }
           
-</style>
-</head>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
-}
 </style>
 </head>
 <body onload="startGame()">
@@ -110,6 +101,7 @@ function updateGameArea() {
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
+            alert('You Lost. Refresh to try again or move onto the 2nd Level by clicking the button below');
             return;
         } 
     }
@@ -169,7 +161,9 @@ function clearmove() {
   <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
   <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
 </div>
-
-<p>The score will count one point for each frame you manage to "stay alive".</p>
 </body>
 </html>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<input type=button onclick="{
+    location='www.google.ca'
+}">
