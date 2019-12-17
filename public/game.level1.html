@@ -33,8 +33,8 @@ let myObstacles = [];
 let myScore;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myGamePiece = new component(30, 30, "pacman.png", 10, 120, "image");
+    myScore = new component("30px", "Consolas", "white", 280, 40, "text");
     myGameArea.start();
 }
 
@@ -58,6 +58,10 @@ let myGameArea = {
 
 function component(width, height, color, x, y, type) {
     this.type = type;
+    if (type == "image" || type == "background") {
+    this.image = new Image();
+    this.image.src = color;
+  }
     this.width = width;
     this.height = height;
     this.speedX = 0;
@@ -66,11 +70,12 @@ function component(width, height, color, x, y, type) {
     this.y = y;    
     this.update = function() {
         ctx = myGameArea.context;
-        if (this.type == "text") {
-            ctx.font = this.width + " " + this.height;
-            ctx.fillStyle = color;
-            ctx.fillText(this.text, this.x, this.y);
-        } else {
+    if (type == "image") {
+      ctx.drawImage(this.image,
+        this.x,
+        this.y,
+        this.width, this.height);
+    }else {
             ctx.fillStyle = color;
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
@@ -164,6 +169,7 @@ function clearmove() {
 </body>
 </html>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<input type=button onclick="{
+<input type=button value=Google onclick="{
     location='www.google.ca'
 }">
+<a href="game.level2.html" style="color:gold; " >Levl 2</a>
