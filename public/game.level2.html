@@ -120,7 +120,8 @@ function updateGameArea() {
     let x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
-            alert('OOOOFFF. Guess you gotta restart nigga ');           
+            myGameArea.stop(alert('OOOOFFF. Refresh and go back to level 1.:)'));
+                       
             return;
         } 
     }
