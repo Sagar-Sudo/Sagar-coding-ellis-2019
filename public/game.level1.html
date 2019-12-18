@@ -25,7 +25,7 @@ canvas {
           
 </style>
 </head>
-<body onload="startGame()">
+<body onload="startGame()" align=center>
 <script>
 
 let myGamePiece;
@@ -41,8 +41,8 @@ function startGame() {
 let myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = 680;
+        this.canvas.height = 470;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -58,7 +58,7 @@ let myGameArea = {
 
 function component(width, height, color, x, y, type) {
     this.type = type;
-    if (type == "image" || type == "background") {
+    if (type == "image") {
     this.image = new Image();
     this.image.src = color;
   }
@@ -75,7 +75,8 @@ function component(width, height, color, x, y, type) {
         this.x,
         this.y,
         this.width, this.height);
-    }else {
+    } 
+ else {
             ctx.fillStyle = color;
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
@@ -107,6 +108,7 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
             alert('You Lost. Refresh to try again or move onto the 2nd Level by clicking the button below');
+            location='https://www.google.ca'
             return;
         } 
     }
@@ -160,7 +162,7 @@ function clearmove() {
     myGamePiece.speedY = 0; 
 }
 </script>
-<div style="text-align:center;width:480px;">
+<div align=center>
   <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
   <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
   <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
@@ -170,6 +172,6 @@ function clearmove() {
 </html>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <input type=button value=Google onclick="{
-    location='www.google.ca'
+    location='https://www.google.com/?safe=active&ssui=on'
 }">
 <a href="game.level2.html" style="color:gold; " >Levl 2</a>
