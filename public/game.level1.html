@@ -107,7 +107,7 @@ function updateGameArea() {
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
-            alert('You Lost. Refresh to try again or move onto the 2nd Level by clicking the button below');
+            alert('You Lost. Refresh to try again or move onto the 2nd Level by clicking the button below. Otherwise please search up why youre bad at this.');
             location='https://www.google.ca'
             return;
         } 
@@ -122,8 +122,8 @@ function updateGameArea() {
         minGap = 50;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "green", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+        myObstacles.push(new component(10, height, "purple", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "red", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].speedX = -1;
@@ -171,7 +171,5 @@ function clearmove() {
 </body>
 </html>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<input type=button value=Google onclick="{
-    location='https://www.google.com/?safe=active&ssui=on'
-}">
-<a href="game.level2.html" style="color:gold; " >Levl 2</a>
+
+<a href="game.level2.html" style="color:gold; " align=center>Levl 2</a>
