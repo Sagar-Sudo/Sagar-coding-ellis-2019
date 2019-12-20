@@ -120,7 +120,7 @@ function updateGameArea() {
     let x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
-            myGameArea.stop(alert('OOOOFFF. Press the back button to go back to level 1'));
+            myGameArea.stop(alert('OOOOFFF. Press the back button twice to go back to level 1'));
             location='www.google.ca'
             return;
         } 
