@@ -110,7 +110,10 @@
                     if (myGamePiece.crashWith(myObstacles[i])) {
                         myGameArea.stop();
                         alert('You Lost. Refresh to try again or move onto the 2nd Level by clicking the button below. Otherwise please search up why youre bad at this.');
-                        location = 'https://www.google.ca'
+                        location = 'https://www.google.ca';
+                              let audio = new Audio('tinkle.mp3');
+                            audio.play();
+   
                         return;
                     }
                 }
