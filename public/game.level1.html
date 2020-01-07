@@ -34,14 +34,14 @@
         let myGamePiece;
         let myObstacles = [];
         let myScore;
-
+    
         function startGame() {
             myGamePiece = new component(30, 30, "pacman.png", 10, 120, "image");
             myScore = new component("30px", "Consolas", "white", 280, 40, "text");
             myGameArea.start();
         }
 
-        let myGameArea = {
+        let myGameArea = { 
             canvas: document.createElement("canvas"),
             start: function() {
                 this.canvas.width = 680;
