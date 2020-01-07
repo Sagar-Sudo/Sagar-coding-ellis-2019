@@ -108,11 +108,12 @@
                 let x, height, gap, minHeight, maxHeight, minGap, maxGap;
                 for (i = 0; i < myObstacles.length; i += 1) {
                     if (myGamePiece.crashWith(myObstacles[i])) {
-                        myGameArea.stop();
+                        myGameArea.stop();                             
+                         let audio = new Audio('tinkle.mp3');
+                            audio.play();
                         alert('You Lost. Refresh to try again or move onto the 2nd Level by clicking the button below. Otherwise please search up why youre bad at this.');
                         location = 'https://www.google.ca';
-                              let audio = new Audio('tinkle.mp3');
-                            audio.play();
+
    
                         return;
                     }
