@@ -34,8 +34,10 @@
         let myGamePiece;
         let myObstacles = [];
         let myScore;
+       let myAudio = new Audio('tinkle.mp3');
     
         function startGame() {
+            myAudio.play()
             myGamePiece = new component(30, 30, "pacman.png", 10, 120, "image");
             myScore = new component("30px", "Consolas", "white", 280, 40, "text");
             myGameArea.start();
@@ -109,12 +111,10 @@
                 for (i = 0; i < myObstacles.length; i += 1) {
                     if (myGamePiece.crashWith(myObstacles[i])) {
                         myGameArea.stop();                             
-                         let audio = new Audio('tinkle.mp3');
+                   //     let audio = new Audio('tinkle.mp3');
                             audio.play();
                         alert('You Lost. Refresh to try again or move onto the 2nd Level by clicking the button below. Otherwise please search up why youre bad at this.');
                         location = 'https://www.google.ca';
-
-   
                         return;
                     }
                 }
