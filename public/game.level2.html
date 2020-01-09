@@ -36,8 +36,10 @@
         let myGamePiece;
         let myObstacles = [];
         let myScore;
+         let myAudio = new Audio('pacmandying.mp3');
 
-        function startGame() {
+        function startGame() { 
+        // myAudio.play() 
             myGamePiece = new component(30, 30, "pacman.png", 10, 120, "image");
             myGamePiece.gravity = 1;
             myScore = new component("30px", "Consolas", "white", 280, 40, "text");
@@ -119,8 +121,13 @@
         function updateGameArea() {
             let x, height, gap, minHeight, maxHeight, minGap, maxGap;
             for (i = 0; i < myObstacles.length; i += 1) {
-                if (myGamePiece.crashWith(myObstacles[i])) {
-                    myGameArea.stop(alert('OOOOFFF. Press the back button twice to go back to level 1'));
+                if (myGamePiece.crashWith(myObstacles[i])) 
+                {
+                    myGameArea.stop                   //     let audio = new Audio('tinkle.mp3');
+                    //        audio.play();
+                      myAudio.play()
+  
+                      //  setTimeout(function(){ alert("Hello");   }, 1000);(alert('OOOOFFF. Press the back button twice to go back to level 1'));
                     location = 'www.google.ca'
                     return;
                 }
