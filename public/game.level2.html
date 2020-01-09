@@ -123,11 +123,13 @@
             for (i = 0; i < myObstacles.length; i += 1) {
                 if (myGamePiece.crashWith(myObstacles[i])) 
                 {
-                    myGameArea.stop                   //     let audio = new Audio('tinkle.mp3');
+                    myGameArea.stop ()
+                                       //     let audio = new Audio('tinkle.mp3');
                     //        audio.play();
                       myAudio.play()
   
-                      //  setTimeout(function(){ alert("Hello");   }, 1000);(alert('OOOOFFF. Press the back button twice to go back to level 1'));
+                      //  setTimeout(function(){ alert("Hello");   }, 1000);
+                    (alert('OOOOFFF. Press the back button twice to go back to level 1'));
                     location = 'www.google.ca'
                     return;
                 }
